@@ -1,0 +1,16 @@
+[Unit]
+Description=Minecraft
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+User=minecraft
+Group=minecraft
+WorkingDirectory=/opt/minecraft-server-butler/server
+ExecStartPre=/opt/minecraft-server-butler/scripts/prepare.sh
+ExecStart=/opt/minecraft-server-butler/scripts/start.sh
+ExecStop=/opt/minecraft-server-butler/scripts/stop.sh
+TimeoutSec=900
+
+[Install]
+WantedBy=multi-user.target

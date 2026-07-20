@@ -1,0 +1,6 @@
+[Unit]
+Description=Minecraft Maintenance
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl restart minecraft.service

@@ -1,0 +1,9 @@
+[Unit]
+Description=Minecraft Maintenance Timer
+
+[Timer]
+OnCalendar=*-*-* 07/8:50:00
+AccuracySec=1us
+
+[Install]
+WantedBy=timers.target
