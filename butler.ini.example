@@ -1,0 +1,12 @@
+[server]
+auto_update = true
+launch_options = -Xms4G -Xmx4G
+
+[mcrcon]
+password = password
+port = 25575
+
+[backup]
+path = /storage/volumes/backup/minecraft
+retention_short = 3
+retention_long = 12
