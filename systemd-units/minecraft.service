@@ -9,7 +9,7 @@ Group=minecraft
 WorkingDirectory=/opt/minecraft-server-butler/server
 ExecStartPre=/opt/minecraft-server-butler/scripts/prepare.py
 ExecStart=/opt/minecraft-server-butler/scripts/start.py
-ExecStop=/opt/minecraft-server-butler/scripts/stop.sh
+ExecStop=/opt/minecraft-server-butler/scripts/stop.py
 TimeoutSec=900
 
 [Install]
