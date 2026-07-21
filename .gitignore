@@ -1,3 +1,4 @@
 flags/
 server/
-settings
+scripts/butler/__pycache__/
+butler.ini
