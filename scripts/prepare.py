@@ -3,6 +3,7 @@
 from contextlib import suppress
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -190,6 +191,8 @@ def backup() -> None:
         check=True,
     )
 
+    os.sync()
+
     try:
         verify_zstd(backup_file)
     except RuntimeError as error:
@@ -203,6 +206,8 @@ def backup() -> None:
 
     destination = PATH_BACKUP_SHORT / new_shortterm
     backup_file.rename(destination)
+
+    os.sync()
 
     print(
         f"New short-term backup created: {destination}",
@@ -235,6 +240,8 @@ def backup() -> None:
 
         destination = (PATH_BACKUP_LONG / new_longterm)
         (PATH_BACKUP_BUFFER / new_longterm).rename(destination)
+
+        os.sync()
 
         print(
             f"New long-term backup created: {destination}",
